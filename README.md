@@ -5,7 +5,7 @@ tcl@itcl-home:vim ~/.profile
 tcl@itcl-home:~/www/vacancesweb$ export PATH=~/.config/composer/vendor/bin:$PATH
 tcl@itcl-home:~/www/vacancesweb$ source ~/.profile
 tcl@itcl-home:laravel -V
-
+sudo update-alternatives --config php
 
 ## create project
 laravel new api.vacancesweb.be
