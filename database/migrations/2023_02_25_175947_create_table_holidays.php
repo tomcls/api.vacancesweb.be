@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('holidays', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->bigInteger('user_id')->unsigned();
-            $table->string('holiday_type_id',40)->index();
+            $table->bigInteger('holiday_type_id')->unsigned();
             $table->bigInteger('image_id')->unsigned();
             $table->decimal('longitude',18,15)->index();
             $table->decimal('latitude',18,15)->index();
