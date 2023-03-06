@@ -18,9 +18,16 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
         'email',
         'password',
+        'phone',
+        'company_vat',
+        'company_name',
+        'code',
+        'active',
+        'lang',
     ];
 
     /**
@@ -67,7 +74,7 @@ class User extends Authenticatable
 	 * @param  string $salt    The salt for the hash
 	 * @return string  An 80 character string of the Flourish fingerprint, salt and hashed password
 	 */
-	static private function hashWithSalt($source, $salt)
+	static public function hashWithSalt($source, $salt)
 	{
 		$sha1 = sha1($salt . $source);
 		for ($i = 0; $i < 1000; $i++) {
